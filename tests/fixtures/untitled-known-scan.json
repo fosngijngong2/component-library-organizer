@@ -1,0 +1,92 @@
+{
+  "schema_version": "1.0",
+  "file": {
+    "name": "Untitled",
+    "url": "https://www.figma.com/design/fZMOyyHV9g3wavdMq0YXfK/Untitled?node-id=0-1",
+    "file_key": "fZMOyyHV9g3wavdMq0YXfK",
+    "node_scope": "0:1",
+    "source": "user-provided known scan",
+    "coverage": "partial"
+  },
+  "summary": {
+    "components": 16,
+    "component_sets": 7,
+    "instances": 17007,
+    "frames": 45637,
+    "variables": 0,
+    "local_text_styles": 0,
+    "local_effect_styles": 0
+  },
+  "observations": {
+    "existing": [
+      {
+        "name": "发送按钮",
+        "kind": "COMPONENT_SET",
+        "variants": 3,
+        "variant_axes": {"状态": ["半激活", "激活", "未激活"]},
+        "evidence": "observed"
+      },
+      {
+        "name": "输入框-dark",
+        "kind": "COMPONENT_SET",
+        "variants": 3,
+        "variant_axes": {"状态": ["激活", "默认 hint", "未激活"]},
+        "evidence": "observed"
+      }
+    ],
+    "candidates": [
+      {
+        "name": "聊天item",
+        "count": 500,
+        "count_kind": "estimated",
+        "confidence": 0.92,
+        "basis": ["high recurrence", "reported repeated Frame structure"]
+      },
+      {
+        "name": "输入框",
+        "count": 254,
+        "count_kind": "estimated",
+        "confidence": 0.84,
+        "basis": ["high recurrence", "ordinary Frames coexist with an existing input component"],
+        "ambiguity": "Check whether the family contains multiple sizes or states before proposing conversion."
+      }
+    ],
+    "ignored": ["Container", "Frame 2131176441", "BG", "Fill + Shadow", "点击热区"],
+    "issues": [
+      {
+        "severity": "medium",
+        "subject": "输入框",
+        "detail": "The reported Frame family may contain multiple sizes or states; split by structure before standardization."
+      },
+      {
+        "severity": "low",
+        "subject": "Local design tokens",
+        "detail": "No local Variables, Text Styles, or Effect Styles were reported. Confirm whether the file relies on external libraries."
+      }
+    ],
+    "recommendations": [
+      {
+        "component": "Input",
+        "axes": {"Theme": ["Light", "Dark"], "State": ["Default", "Active", "Disabled"]},
+        "note": "Proposal only; validate the light-theme and state evidence in a focused scan."
+      },
+      {
+        "component": "Send Button",
+        "axes": {"State": ["Disabled", "Partial", "Active"]},
+        "note": "Proposal based on the observed three-state set."
+      }
+    ],
+    "limitations": [
+      "Whole-file totals are known, but only selected Component Sets and repeated Frame families are represented in this fixture.",
+      "Candidate recurrence counts are estimates from the prior scan, not exact node-level counts.",
+      "Instance-to-main-component relationships were not included in the available evidence."
+    ],
+    "benchmark": {
+      "semantic_families_selected": 86,
+      "confirmed_visible_families": 62,
+      "hidden_only_candidate_families": 24,
+      "exact_structural_matches": 61,
+      "frozen_visual_exceptions": 1
+    }
+  }
+}
