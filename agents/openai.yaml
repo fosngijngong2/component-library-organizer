@@ -1,0 +1,6 @@
+interface:
+  display_name: "Component Library Organizer"
+  short_description: "只读审计 Figma 组件、实例、重复结构与命名问题"
+  default_prompt: "Use $component-library-organizer to audit this Figma file without modifying it."
+policy:
+  allow_implicit_invocation: true
